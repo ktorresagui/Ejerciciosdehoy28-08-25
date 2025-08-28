@@ -9,7 +9,8 @@ public class Main {
             System.out.println("\n=== MENÚ DE RECURSIVIDAD ===");
             System.out.println("1. Calcular Factorial");
             System.out.println("2. Calcular Fibonacci");
-            System.out.println("3. Salir");
+            System.out.println("3. Calcular Suma de Dígitos");
+            System.out.println("4. Salir");
             System.out.print("Elige una opción: ");
             opcion = sc.nextInt();
 
@@ -27,13 +28,19 @@ public class Main {
                     break;
 
                 case 3:
+                    System.out.print("Ingresa un número para calcular la suma de sus dígitos: ");
+                    int numSuma = sc.nextInt();
+                    System.out.println("La suma de los dígitos de " + numSuma + " es: " + Recursion.sumaDigitos(numSuma));
+                    break;
+
+                case 4:
                     System.out.println("Saliendo del programa...");
                     break;
 
                 default:
                     System.out.println("Opción no válida, intenta nuevamente.");
             }
-        } while(opcion != 3);
+        } while(opcion != 4);
 
         sc.close();
     }
