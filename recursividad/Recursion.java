@@ -26,4 +26,13 @@ public class Recursion {
             return (n % 10) + sumaDigitos(n / 10);  // Separa último dígito y llama recursivamente
         }
     }
+
+    // Invertir cadena recursiva
+    public static String invertirCadena(String str){
+        if (str.isEmpty()){  // Caso base
+            return str;
+        } else {
+            return invertirCadena(str.substring(1)) + str.charAt(0);
+        }
+    }
 }
