@@ -10,9 +10,11 @@ public class Main {
             System.out.println("1. Calcular Factorial");
             System.out.println("2. Calcular Fibonacci");
             System.out.println("3. Calcular Suma de Dígitos");
-            System.out.println("4. Salir");
+            System.out.println("4. Invertir una Cadena");
+            System.out.println("5. Salir");
             System.out.print("Elige una opción: ");
             opcion = sc.nextInt();
+            sc.nextLine(); // limpiar buffer
 
             switch(opcion){
                 case 1:
@@ -34,13 +36,19 @@ public class Main {
                     break;
 
                 case 4:
+                    System.out.print("Ingresa una cadena para invertir: ");
+                    String cadena = sc.nextLine();
+                    System.out.println("La cadena invertida es: " + Recursion.invertirCadena(cadena));
+                    break;
+
+                case 5:
                     System.out.println("Saliendo del programa...");
                     break;
 
                 default:
                     System.out.println("Opción no válida, intenta nuevamente.");
             }
-        } while(opcion != 4);
+        } while(opcion != 5);
 
         sc.close();
     }
